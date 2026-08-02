@@ -1296,7 +1296,7 @@ body {
 
   .hero-spidey-section {
     grid-template-columns: 1fr;
-    padding-top: 60vh;
+    padding-top: 50vh;
     gap: 30px;
   }
 
@@ -1314,7 +1314,7 @@ body {
   }
 
   .spidey-glass-card {
-    padding: 24px;
+    padding: 20px;
   }
 
   .about-grid,
@@ -1334,11 +1334,11 @@ body {
 
 @media (max-width: 640px) {
   .spidey-section {
-    padding: 80px 16px 40px;
+    padding: 80px 20px 40px;
   }
 
   .hero-spidey-section {
-    padding-top: 64vh;
+    padding-top: 52vh;
   }
 
   .skills-categories-grid {
