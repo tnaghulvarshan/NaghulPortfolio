@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T. Naghul Varshan — Cinematic Portfolio &amp; AI Developer</title>
+    
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Cinematic portfolio of T. Naghul Varshan — Full Stack Developer & Generative AI Specialist. MCA student skilled in ReactJS, Node.js, Spring Boot, Java, MongoDB, and Gemini API." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+
+    <!-- Interactive Cursor Glow Spotlight -->
+    <div id="cursor-glow"></div>
+
+    <!-- Preloader Overlay -->
+    <div id="loading-overlay">
+      <div class="loader-container">
+        <div class="loader-logo">TNV</div>
+        <div class="loader-bar-bg">
+          <div id="loader-bar"></div>
+        </div>
+        <div id="loader-text">INITIALIZING CINEMATIC EXPERIENCE... 0%</div>
+      </div>
+    </div>
+
+    <!-- Fixed Fullscreen Canvas for 3D Frame Scroll Animation -->
+    <canvas id="animation-canvas"></canvas>
+
+    <!-- Top Navigation Bar -->
+    <header class="spidey-header" id="navbar">
+      <a href="#home" class="spidey-brand">
+        <img src="/batman-logo.png" alt="TNV Batman Emblem" class="batman-logo-img" />
+        <span class="spidey-brand-name">TNV</span>
+      </a>
+
+      <button class="spidey-hamburger" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="spidey-nav" id="spidey-nav">
+        <a href="#home" class="spidey-nav-link active">HOME</a>
+        <a href="#about" class="spidey-nav-link">ABOUT</a>
+        <a href="#skills" class="spidey-nav-link">SKILLS</a>
+        <a href="#projects" class="spidey-nav-link">PROJECTS</a>
+        <a href="#experience" class="spidey-nav-link">EXPERIENCE</a>
+        <a href="#education" class="spidey-nav-link">EDUCATION</a>
+        <a href="#contact" class="spidey-nav-link">CONTACT</a>
+        <a href="mailto:naghulvarshan278@gmail.com" class="nav-resume-btn">RESUME ➔</a>
+      </nav>
+    </header>
+
+    <!-- Main Scroll Container -->
+    <main id="scroll-container">
+
+      <!-- ============================================================
+           01. HERO SECTION
+           ============================================================ -->
+      <section class="spidey-section hero-spidey-section" id="home">
+        
+        <!-- Background Ambient Floating Light Blobs -->
+        <div class="ambient-blob blob-1"></div>
+        <div class="ambient-blob blob-2"></div>
+
+        <!-- Left Hero Content Column -->
+        <div class="hero-left-content reveal-on-scroll">
+          <div class="hero-badge">
+            <span class="dot-pulse"></span>
+            <span>AVAILABLE FOR FULL STACK &amp; AI ROLES</span>
+          </div>
+
+          <h1 class="hero-main-title">
+            <span class="name-gradient">T. NAGHUL</span><br />
+            <span class="stroke-gradient">VARSHAN</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span class="typing-text">MCA Student • Full Stack Developer • AI Developer</span>
+          </h2>
+
+          <p class="hero-description">
+            Building intelligent, high-performance web applications using MERN Stack, Spring Boot, Artificial Intelligence, Generative AI, automation, and real-time technologies.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="red-cta-button primary-btn">VIEW PROJECTS ➔</a>
+            <a href="mailto:naghulvarshan278@gmail.com" class="red-cta-button secondary-btn">DOWNLOAD RESUME</a>
+          </div>
+        </div>
+
+        <!-- Right Floating Glass Contact Card -->
+        <div class="hero-right-card reveal-on-scroll stagger-2">
+          <div class="glass-quick-card">
+            <div class="quick-card-header">
+              <span class="card-status-dot"></span>
+              <h3>DEVELOPER PROFILE</h3>
+            </div>
+            
+            <div class="quick-card-list">
+              <div class="q-item">
+                <span class="q-icon">✉️</span>
+                <div class="q-info">
+                  <span class="q-label">EMAIL</span>
+                  <a href="mailto:naghulvarshan278@gmail.com" class="q-val">naghulvarshan278@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="q-item">
+                <span class="q-icon">📞</span>
+                <div class="q-info">
+                  <span class="q-label">PHONE</span>
+                  <a href="tel:+919025899267" class="q-val">+91 9025899267</a>
+                </div>
+              </div>
+
+              <div class="q-item">
+                <span class="q-icon">📍</span>
+                <div class="q-info">
+                  <span class="q-label">LOCATION</span>
+                  <span class="q-val">Thiruninravur, Chennai, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="quick-card-socials">
+              <a href="https://linkedin.com/in/naghul-varshan-t-108ba4303" target="_blank" rel="noopener" class="q-soc-btn" title="LinkedIn">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LINKEDIN</span>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener" class="q-soc-btn" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GITHUB</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================
+           02. ABOUT SECTION & ANIMATED STATS
+           ============================================================ -->
+      <section class="spidey-section content-spidey-section" id="about">
+        <div class="spidey-glass-card reveal-on-scroll">
+          <div class="card-header-bar">
+            <span class="spidey-badge">01 // DISCOVER</span>
+            <h2 class="spidey-section-title">ABOUT ME</h2>
+          </div>
+
+          <div class="about-grid">
+            <!-- Left Portrait Placeholder with Glowing Red Animated Border -->
+            <div class="about-image-wrapper">
+              <div class="glow-border-frame">
+                <div class="portrait-box">
+                  <div class="portrait-avatar">
+                    <img src="/my photo1.png" alt="T. Naghul Varshan" class="about-portrait-img" />
+                  </div>
+                  <div class="portrait-overlay"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right About Content -->
+            <div class="about-content-box">
+              <h3 class="about-subheading">Passionate Full Stack &amp; Artificial Intelligence Developer</h3>
+              <p class="about-paragraph">
+                I'm an MCA student at Saveetha College and a dedicated Full Stack Developer passionate about building modern, scalable web applications powered by Artificial Intelligence.
+              </p>
+              <p class="about-paragraph">
+                I enjoy developing complete end-to-end solutions using React, Node.js, Express, Spring Boot, Java, MongoDB, REST APIs, and Generative AI APIs. I focus on solving real-world problems with robust architecture and clean code aesthetics.
+              </p>
+
+              <!-- Animated Counter Statistics Bar -->
+              <div class="stats-counter-grid">
+                <div class="stat-counter-card">
+                  <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+                  <span class="stat-title">PROJECTS</span>
+                </div>
+                <div class="stat-counter-card">
+                  <span class="stat-number" data-target="2">0</span><span class="stat-plus"></span>
+                  <span class="stat-title">INTERNSHIP</span>
+                </div>
+                <div class="stat-counter-card">
+                  <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
+                  <span class="stat-title">TECHNOLOGIES</span>
+                </div>
+                <div class="stat-counter-card">
+                  <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+                  <span class="stat-title">AI APIs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           03. SKILLS MATRIX & INFINITE MARQUEE SECTION
+           ============================================================ -->
+      <section class="spidey-section content-spidey-section" id="skills">
+        <div class="spidey-glass-card reveal-on-scroll">
+          <div class="card-header-bar">
+            <span class="spidey-badge">02 // TECH SPECS</span>
+            <h2 class="spidey-section-title">SKILLS &amp; EXPERTISE</h2>
+          </div>
+
+          <div class="skills-categories-grid">
+            
+            <!-- Category 1: Programming -->
+            <div class="skill-category-card tilt-card reveal-on-scroll stagger-1">
+              <div class="cat-icon">💻</div>
+              <h3>PROGRAMMING</h3>
+              <div class="skills-chip-wrap">
+                <div class="skill-chip"><span class="chip-dot"></span>Java</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Python</div>
+                <div class="skill-chip"><span class="chip-dot"></span>JavaScript</div>
+                <div class="skill-chip"><span class="chip-dot"></span>C</div>
+                <div class="skill-chip"><span class="chip-dot"></span>C++</div>
+              </div>
+            </div>
+
+            <!-- Category 2: Frontend -->
+            <div class="skill-category-card tilt-card reveal-on-scroll stagger-2">
+              <div class="cat-icon">🎨</div>
+              <h3>FRONTEND</h3>
+              <div class="skills-chip-wrap">
+                <div class="skill-chip"><span class="chip-dot"></span>ReactJS</div>
+                <div class="skill-chip"><span class="chip-dot"></span>HTML5</div>
+                <div class="skill-chip"><span class="chip-dot"></span>CSS3 / Vanilla</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Vite</div>
+              </div>
+            </div>
+
+            <!-- Category 3: Backend -->
+            <div class="skill-category-card tilt-card reveal-on-scroll stagger-3">
+              <div class="cat-icon">⚙️</div>
+              <h3>BACKEND</h3>
+              <div class="skills-chip-wrap">
+                <div class="skill-chip"><span class="chip-dot"></span>Node.js</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Express.js</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Spring Boot</div>
+                <div class="skill-chip"><span class="chip-dot"></span>RESTful APIs</div>
+              </div>
+            </div>
+
+            <!-- Category 4: Database -->
+            <div class="skill-category-card tilt-card reveal-on-scroll stagger-4">
+              <div class="cat-icon">🗄️</div>
+              <h3>DATABASE</h3>
+              <div class="skills-chip-wrap">
+                <div class="skill-chip"><span class="chip-dot"></span>MongoDB</div>
+                <div class="skill-chip"><span class="chip-dot"></span>MySQL</div>
+                <div class="skill-chip"><span class="chip-dot"></span>2dsphere Geospatial</div>
+              </div>
+            </div>
+
+            <!-- Category 5: AI & Automation -->
+            <div class="skill-category-card tilt-card reveal-on-scroll stagger-1">
+              <div class="cat-icon">🤖</div>
+              <h3>AI &amp; AUTOMATION</h3>
+              <div class="skills-chip-wrap">
+                <div class="skill-chip highlight"><span class="chip-dot"></span>OpenAI API</div>
+                <div class="skill-chip highlight"><span class="chip-dot"></span>Gemini API</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Prompt Engineering</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Puppeteer / Scraping</div>
+              </div>
+            </div>
+
+            <!-- Category 6: Tools & Workflow -->
+            <div class="skill-category-card tilt-card reveal-on-scroll stagger-2">
+              <div class="cat-icon">🛠️</div>
+              <h3>TOOLS &amp; DEVOPS</h3>
+              <div class="skills-chip-wrap">
+                <div class="skill-chip"><span class="chip-dot"></span>Git</div>
+                <div class="skill-chip"><span class="chip-dot"></span>GitHub</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Postman</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Axios</div>
+                <div class="skill-chip"><span class="chip-dot"></span>Docker</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Infinite Marquee Banner -->
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
+              <span class="m-item">REACTJS</span>
+              <span class="m-item">NODE.JS</span>
+              <span class="m-item">MONGODB</span>
+              <span class="m-item">EXPRESS</span>
+              <span class="m-item">JAVA</span>
+              <span class="m-item">PYTHON</span>
+              <span class="m-item">GITHUB</span>
+              <span class="m-item">DOCKER</span>
+              <span class="m-item">OPENAI</span>
+              <span class="m-item">GEMINI API</span>
+              <span class="m-item">JWT</span>
+              <span class="m-item">SOCKET.IO</span>
+              <!-- Repeat for smooth loop -->
+              <span class="m-item">REACTJS</span>
+              <span class="m-item">NODE.JS</span>
+              <span class="m-item">MONGODB</span>
+              <span class="m-item">EXPRESS</span>
+              <span class="m-item">JAVA</span>
+              <span class="m-item">PYTHON</span>
+              <span class="m-item">GITHUB</span>
+              <span class="m-item">DOCKER</span>
+              <span class="m-item">OPENAI</span>
+              <span class="m-item">GEMINI API</span>
+              <span class="m-item">JWT</span>
+              <span class="m-item">SOCKET.IO</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           04. FEATURED PROJECTS SHOWCASE
+           ============================================================ -->
+      <section class="spidey-section content-spidey-section" id="projects">
+        <div class="spidey-glass-card reveal-on-scroll">
+          <div class="card-header-bar">
+            <span class="spidey-badge">03 // PORTFOLIO</span>
+            <h2 class="spidey-section-title">FEATURED PROJECTS</h2>
+          </div>
+
+          <div class="projects-showcase-list">
+
+            <!-- Project 1: ResumeForge AI -->
+            <div class="project-showcase-card tilt-card reveal-on-scroll stagger-1">
+              <div class="project-header-row">
+                <span class="proj-badge">GEN AI &amp; ATS</span>
+                <span class="proj-index">01</span>
+              </div>
+              <h3 class="proj-title">ResumeForge AI</h3>
+              <p class="proj-description">
+                ATS resume optimizer matching job descriptions via Google Gemini API and generating pixel-perfect PDF resumes using Puppeteer. Performs keyword extraction, score calculation, and custom tailoring.
+              </p>
+              <div class="proj-features-grid">
+                <div class="f-pill">✓ ATS Keyword Analysis</div>
+                <div class="f-pill">✓ AI Score Optimization</div>
+                <div class="f-pill">✓ JD Match Ranking</div>
+                <div class="f-pill">✓ Puppeteer PDF Export</div>
+              </div>
+              <div class="proj-tech-tags">
+                <span class="t-tag">ReactJS</span>
+                <span class="t-tag">Node.js</span>
+                <span class="t-tag">Express</span>
+                <span class="t-tag">MongoDB</span>
+                <span class="t-tag highlight">Gemini API</span>
+                <span class="t-tag">Puppeteer</span>
+              </div>
+            </div>
+
+            <!-- Project 2: Local Mechanic Finder -->
+            <div class="project-showcase-card tilt-card reveal-on-scroll stagger-2">
+              <div class="project-header-row">
+                <span class="proj-badge">REAL-TIME GEOSPATIAL</span>
+                <span class="proj-index">02</span>
+              </div>
+              <h3 class="proj-title">Local Mechanic Finder</h3>
+              <p class="proj-description">
+                Location-based real-time service platform connecting stranded drivers to nearby mechanics within a &lt;10km radius using MongoDB 2dsphere indexing, Google Maps API, and Socket.io.
+              </p>
+              <div class="proj-features-grid">
+                <div class="f-pill">✓ 2dsphere Radius Search</div>
+                <div class="f-pill">✓ Live Socket.io Tracking</div>
+                <div class="f-pill">✓ Instant Request Alerts</div>
+                <div class="f-pill">✓ Google Maps API</div>
+              </div>
+              <div class="proj-tech-tags">
+                <span class="t-tag">ReactJS</span>
+                <span class="t-tag">Node.js</span>
+                <span class="t-tag">Express</span>
+                <span class="t-tag">MongoDB</span>
+                <span class="t-tag highlight">Socket.io</span>
+                <span class="t-tag">Google Maps</span>
+              </div>
+            </div>
+
+            <!-- Project 3: Client Finder Application -->
+            <div class="project-showcase-card tilt-card reveal-on-scroll stagger-3">
+              <div class="project-header-row">
+                <span class="proj-badge">AI LEAD GENERATION</span>
+                <span class="proj-index">03</span>
+              </div>
+              <h3 class="proj-title">Client Finder Application</h3>
+              <p class="proj-description">
+                Automated B2B lead generation tool utilizing Playwright web scraping, Google Places API, and OpenAI proposal generation to discover businesses and send automated AI proposals.
+              </p>
+              <div class="proj-features-grid">
+                <div class="f-pill">✓ Business Discovery</div>
+                <div class="f-pill">✓ AI Lead Scoring</div>
+                <div class="f-pill">✓ Proposal Generator</div>
+                <div class="f-pill">✓ CRM Pipeline</div>
+              </div>
+              <div class="proj-tech-tags">
+                <span class="t-tag">Playwright</span>
+                <span class="t-tag">Node.js</span>
+                <span class="t-tag highlight">OpenAI API</span>
+                <span class="t-tag">Places API</span>
+              </div>
+            </div>
+
+            <!-- Project 4: PediaCare System -->
+            <div class="project-showcase-card tilt-card reveal-on-scroll stagger-4">
+              <div class="project-header-row">
+                <span class="proj-badge">CLINICAL AI SYSTEM</span>
+                <span class="proj-index">04</span>
+              </div>
+              <h3 class="proj-title">PediaCare Healthcare System</h3>
+              <p class="proj-description">
+                Pediatric healthcare clinic management system with OpenAI API diet plan generation, appointment scheduling, and automated patient record analytics.
+              </p>
+              <div class="proj-features-grid">
+                <div class="f-pill">✓ Appointment Scheduler</div>
+                <div class="f-pill">✓ Medical EHR Records</div>
+                <div class="f-pill">✓ AI Diet Recommendations</div>
+                <div class="f-pill">✓ Patient Assistant Bot</div>
+              </div>
+              <div class="proj-tech-tags">
+                <span class="t-tag">Spring Boot</span>
+                <span class="t-tag">Java</span>
+                <span class="t-tag">ReactJS</span>
+                <span class="t-tag">MongoDB</span>
+                <span class="t-tag highlight">OpenAI API</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           05. WORK EXPERIENCE TIMELINE
+           ============================================================ -->
+      <section class="spidey-section content-spidey-section" id="experience">
+        <div class="spidey-glass-card reveal-on-scroll">
+          <div class="card-header-bar">
+            <span class="spidey-badge">04 // CAREER</span>
+            <h2 class="spidey-section-title">WORK EXPERIENCE</h2>
+          </div>
+
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item reveal-on-scroll">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card-mini">
+                <div class="t-date">AUGUST 2023 – DECEMBER 2023</div>
+                <h3 class="t-role">Full Stack Development Intern</h3>
+                <h4 class="t-company">Global Techno Solutions</h4>
+                <p class="t-desc">
+                  Worked on end-to-end web applications using Java, Spring Boot, RESTful APIs, and frontend integration. Built scalable REST microservices and collaborated in Agile sprint cycles.
+                </p>
+                <div class="t-skills">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>REST APIs</span>
+                  <span>Frontend</span>
+                  <span>Backend Integration</span>
+                  <span>Agile</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           06. EDUCATION & CERTIFICATIONS
+           ============================================================ -->
+      <section class="spidey-section content-spidey-section" id="education">
+        <div class="spidey-glass-card reveal-on-scroll">
+          <div class="card-header-bar">
+            <span class="spidey-badge">05 // ACADEMICS</span>
+            <h2 class="spidey-section-title">EDUCATION &amp; CERTIFICATIONS</h2>
+          </div>
+
+          <div class="edu-grid">
+            
+            <!-- Education Cards -->
+            <div class="edu-column">
+              <h3 class="column-header-title">🎓 ACADEMIC DEGREES</h3>
+
+              <div class="edu-card glass-card-mini reveal-on-scroll stagger-1">
+                <span class="edu-year">2024 – 2026</span>
+                <h4 class="edu-degree">Master of Computer Applications (MCA)</h4>
+                <p class="edu-inst">Saveetha College, Chennai</p>
+              </div>
+
+              <div class="edu-card glass-card-mini reveal-on-scroll stagger-2">
+                <span class="edu-year">2021 – 2024</span>
+                <h4 class="edu-degree">Bachelor of Computer Science (B.Sc CS)</h4>
+                <p class="edu-inst">Saveetha College, Chennai</p>
+              </div>
+
+              <div class="edu-card glass-card-mini reveal-on-scroll stagger-3">
+                <span class="edu-year">2020 – 2021</span>
+                <h4 class="edu-degree">Higher Secondary (HSC)</h4>
+                <p class="edu-inst">Jaya Matriculation Higher Secondary School</p>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="cert-column">
+              <h3 class="column-header-title">📜 CERTIFICATIONS</h3>
+
+              <div class="cert-card glass-card-mini reveal-on-scroll stagger-2">
+                <div class="cert-badge-glow">VERIFIED</div>
+                <h4 class="cert-name">Java Full Stack Development</h4>
+                <p class="cert-inst">Greens Technology, Chennai</p>
+                <div class="cert-topics">
+                  <span>Core Java</span>
+                  <span>Spring Boot</span>
+                  <span>ReactJS</span>
+                  <span>Node.js</span>
+                  <span>MySQL</span>
+                  <span>MongoDB</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           07. CONTACT SECTION
+           ============================================================ -->
+      <section class="spidey-section content-spidey-section" id="contact">
+        <div class="spidey-glass-card reveal-on-scroll">
+          <div class="card-header-bar">
+            <span class="spidey-badge">06 // CONNECT</span>
+            <h2 class="spidey-section-title">GET IN TOUCH</h2>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Left Info Column -->
+            <div class="contact-left-info">
+              <h3 class="contact-headline">LET'S BUILD SOMETHING AMAZING</h3>
+              <p class="contact-subtext">
+                Available for Full Stack Developer roles, Generative AI projects, and high-impact engineering opportunities.
+              </p>
+
+              <div class="contact-details-list">
+                <a href="mailto:naghulvarshan278@gmail.com" class="c-detail-item">
+                  <span class="c-d-icon">✉️</span>
+                  <span>naghulvarshan278@gmail.com</span>
+                </a>
+
+                <a href="tel:+919025899267" class="c-detail-item">
+                  <span class="c-d-icon">📞</span>
+                  <span>+91 9025899267</span>
+                </a>
+
+                <div class="c-detail-item">
+                  <span class="c-d-icon">📍</span>
+                  <span>Thiruninravur, Chennai, Tamil Nadu</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Form Column -->
+            <div class="contact-form-box">
+              <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to T. Naghul Varshan.');">
+                <div class="form-group">
+                  <input type="text" id="form-name" required placeholder="Your Name" />
+                </div>
+                <div class="form-group">
+                  <input type="email" id="form-email" required placeholder="Your Email Address" />
+                </div>
+                <div class="form-group">
+                  <input type="text" id="form-subject" placeholder="Subject" />
+                </div>
+                <div class="form-group">
+                  <textarea id="form-message" rows="4" required placeholder="Your Message..."></textarea>
+                </div>
+                <button type="submit" class="red-cta-button form-submit-btn">SEND MESSAGE ➔</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="spidey-footer">
+      <div class="footer-content-wrap">
+        <div class="footer-brand">
+          <span class="f-logo">TNV</span>
+          <span class="f-sub">Full Stack &amp; AI Developer</span>
+        </div>
+
+        <div class="footer-nav-links">
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#skills">SKILLS</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#experience">EXPERIENCE</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+
+        <div class="footer-copy">
+          © 2026 T. Naghul Varshan. Designed &amp; Engineered with Passion.
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
