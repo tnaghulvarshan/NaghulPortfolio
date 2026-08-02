@@ -93,13 +93,14 @@ function drawImageProp(ctx, img) {
   } else {
     drawHeight = canvasHeight;
     drawWidth = canvasHeight * imgRatio;
-    // On mobile portrait viewports, align focal point to center character face
+    // On mobile portrait viewports, center character face vertically & horizontally in the middle of screen
     if (canvasWidth <= 768) {
-      offsetX = (canvasWidth - drawWidth) * 0.38;
+      offsetX = (canvasWidth - drawWidth) * 0.42;
+      offsetY = (canvasHeight - drawHeight) * 0.25;
     } else {
       offsetX = (canvasWidth - drawWidth) / 2;
+      offsetY = 0;
     }
-    offsetY = 0;
   }
 
   ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
