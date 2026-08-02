@@ -1284,8 +1284,18 @@ body {
 
   .hero-spidey-section {
     grid-template-columns: 1fr;
-    padding-top: 100px;
+    padding-top: 140px;
+    padding-bottom: 60px;
     gap: 30px;
+  }
+
+  .hero-left-content {
+    background: rgba(11, 11, 13, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .hero-right-card {
@@ -1313,7 +1323,7 @@ body {
 
 @media (max-width: 640px) {
   .spidey-section {
-    padding: 80px 16px 40px;
+    padding: 100px 16px 40px;
   }
 
   .skills-categories-grid {

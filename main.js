@@ -93,7 +93,12 @@ function drawImageProp(ctx, img) {
   } else {
     drawHeight = canvasHeight;
     drawWidth = canvasHeight * imgRatio;
-    offsetX = (canvasWidth - drawWidth) / 2;
+    // On portrait mobile viewports, offset character slightly right so the face is open & clear of text overlay
+    if (window.innerWidth <= 768) {
+      offsetX = (canvasWidth - drawWidth) * 0.15;
+    } else {
+      offsetX = (canvasWidth - drawWidth) / 2;
+    }
     offsetY = 0;
   }
 
